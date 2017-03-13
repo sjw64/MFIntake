@@ -1,0 +1,104 @@
+﻿@model MFIntake.Models.Intake
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<p class="error">@ViewBag.ErrorMessage</p>
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Intake</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CaseNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaseNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceModel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeviceModel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Custodian)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Custodian)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WarrantNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WarrantNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StorageLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StorageLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IntakeStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IntakeStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReceivedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReceivedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestedByDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestedByDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IntakeNote)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IntakeNote)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

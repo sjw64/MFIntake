@@ -1,0 +1,96 @@
+﻿@model IEnumerable<MFIntake.Models.Intake>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Case Number", "Index", new { sortOrder = ViewBag.CaseSortParm })
+            @*@Html.DisplayNameFor(model => model.CaseNumber)*@
+        </th>
+        <th>
+            @Html.ActionLink("Device Model", "Index", new { sortOrder = ViewBag.DeviceSortParm })
+            @*@Html.DisplayNameFor(model => model.DeviceModel)*@
+        </th>
+        <th>
+            @Html.ActionLink("Case Agent", "Index", new { sortOrder = ViewBag.AgentSortParm })
+            @*@Html.DisplayNameFor(model => model.CaseAgent)*@
+        </th>
+        <th>
+            @Html.ActionLink("Custodian", "Index", new { sortOrder = ViewBag.CustodianSortParm })
+            @*@Html.DisplayNameFor(model => model.Custodian)*@
+        </th>
+        <th>
+            @Html.ActionLink("Search Warrant No.", "Index", new { sortOrder = ViewBag.WarrantSortParm })
+            @*@Html.DisplayNameFor(model => model.WarrantNumber)*@
+        </th>
+        <th>
+            @Html.ActionLink("Storage Location", "Index", new { sortOrder = ViewBag.LocSortParm })
+            @*@Html.DisplayNameFor(model => model.StorageLocation)*@
+        </th>
+        <th>
+            @Html.ActionLink("Intake Status", "Index", new { sortOrder = ViewBag.StatusSortParm })
+            @*@Html.DisplayNameFor(model => model.IntakeStatus)*@
+        </th>
+        <th>
+            @Html.ActionLink("Received Date", "Index", new { sortOrder = ViewBag.RecSortParm })
+            @*@Html.DisplayNameFor(model => model.ReceivedDate)*@
+        </th>
+        <th>
+            @Html.ActionLink("Requested By Date", "Index", new { sortOrder = ViewBag.ReqSortParm })
+            @*@Html.DisplayNameFor(model => model.RequestedByDate)*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IntakeNote)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CaseNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeviceModel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Custodian)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WarrantNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StorageLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IntakeStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReceivedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestedByDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IntakeNote)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @* @Html.ActionLink("Delete", "Delete", new { id = item.ID }) *@
+        </td>
+    </tr>
+}
+
+</table>

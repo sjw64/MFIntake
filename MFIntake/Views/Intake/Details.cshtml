@@ -1,0 +1,139 @@
+﻿@model MFIntake.Models.Intake
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Intake</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CaseNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaseNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceModel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeviceModel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Custodian)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Custodian)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WarrantNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WarrantNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StorageLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StorageLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IntakeStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IntakeStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReceivedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReceivedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestedByDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestedByDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IntakeNote)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IntakeNote)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Exams)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Exam Type</th>
+                    <th>Exam Status</th>
+                    <th>Analyst</th>
+                    <th>Exam Date</th>
+                    <th>File Location</th>
+                    <th>Equipment Needed?</th>
+                    <th>Exam Note</th>
+                </tr>
+                @foreach (var item in Model.Exams)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ExamType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ExamStatus)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Analyst)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ExamDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ExamFileLocation)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AddlEquipNeeded)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ExamNote)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

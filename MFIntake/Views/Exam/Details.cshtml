@@ -1,0 +1,82 @@
+﻿@model MFIntake.Models.Exam
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Exam</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Intake.CaseNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Intake.CaseNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Analyst)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Analyst)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamFileLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamFileLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddlEquipNeeded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddlEquipNeeded)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamNote)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamNote)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ExamID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

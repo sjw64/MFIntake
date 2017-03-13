@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Mobile Forensics Lab</h1>
+    <p class="lead">Enter New Evidence received and track the examination progress.</p>
+    <p>
+        <a class="btn btn-primary btn-lg" href="@Url.Action("Create", "Intake")">Intake New Evidence &raquo;</a>
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Open Cases</h2>
+        <p>
+            View recent Open Cases to edit or enter examinations.
+        </p>
+        <p>
+            <a class="btn btn-default" href="@Url.Action("Index", "Intake")">View Open Cases &raquo;</a>
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h2>View Agents</h2>
+        <p>View List of Case Agents.</p>
+        <p>
+            <a class="btn btn-default" href="@Url.Action("Index", "Agent")">View Agents &raquo;</a>
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h2>View Custodians</h2>
+        <p>View List of Custodians.</p>
+        <p>
+            <a class="btn btn-default" href="@Url.Action("Index", "Custodian")">View Custodians &raquo;</a>
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h2>View Resources</h2>
+        <p>View Resource Materials.</p>
+        <p>
+            <a class="btn btn-default" href="@Url.Action("About", "Home")">View Resources &raquo;</a>
+        </p>
+    </div>
+</div>

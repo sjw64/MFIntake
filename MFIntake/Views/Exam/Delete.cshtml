@@ -1,0 +1,88 @@
+﻿@model MFIntake.Models.Exam
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<p class="error">@ViewBag.ErrorMessage</p>
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Exam</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Intake.CaseNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Intake.CaseNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Analyst)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Analyst)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamFileLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamFileLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddlEquipNeeded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddlEquipNeeded)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamNote)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamNote)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

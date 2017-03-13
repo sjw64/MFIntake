@@ -1,0 +1,75 @@
+﻿@model IEnumerable<MFIntake.Models.Exam>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Intake.CaseNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExamType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExamStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Analyst)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExamDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExamFileLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddlEquipNeeded)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExamNote)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Intake.CaseNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExamType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExamStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Analyst)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExamDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExamFileLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddlEquipNeeded)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExamNote)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ExamID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ExamID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ExamID })
+        </td>
+    </tr>
+}
+
+</table>
